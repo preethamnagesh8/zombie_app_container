@@ -1,0 +1,34 @@
+{% block content %}
+<h1>Welcome to Zombie Apocalypse Challenge</h1>
+
+<script>
+
+    setInterval(function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost:8001/infected/', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.status === 200) {
+                    console.log('Zombie infection service running fine');
+                } else {
+                    console.log('Zombie infection service running fine');
+                }
+            };
+            xhr.send(null);
+        }, 30000); // check every 30 seconds
+
+</script>
+
+<p>
+
+The zombie apocalypse has begun and hordes of zombies are attacking cities across the globe. The zombies come in various types, including fast, slow, smart, undead, and mutated. Each type has its own set of strengths and weaknesses, making them more or less dangerous depending on the situation.
+
+The world's top scientists have discovered that the zombies are being controlled by a mastermind who is using a powerful device to amplify their attacks. The device is hidden somewhere in one of the cities that the zombies have already attacked.
+
+To stop the apocalypse and save the world, a team of elite agents must work together to find the device and destroy it before it's too late. The team is given a map of the cities that have been attacked, along with information on the types of zombies in each city and their strengths and weaknesses.
+
+The team must use this information to determine which city is most likely to be hiding the device, based on the type of zombies present and their powers. They must then work together to solve a series of puzzles and challenges in order to uncover the device's location and destroy it.
+
+</p>
+
+<a href="/zombie/attacks/">View Attacks List</a>
+{% endblock %}

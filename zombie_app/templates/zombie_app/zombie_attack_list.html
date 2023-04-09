@@ -1,0 +1,23 @@
+
+
+{% block content %}
+    <h1>Zombie Attack List</h1>
+
+    <form action="" method="get">
+        <input type="text" name="q" placeholder="Search by location">
+        <button type="submit">Search</button>
+        <a href="/zombie/attacks/">Clear Search</a>
+    </form>
+
+    <ul>
+        {% for zombie_attack in zombie_attacks %}
+            <li>
+                <h2>{{ zombie_attack.0 }}</h2>
+                <p>Date: {{ zombie_attack.1 }}</p>
+                <p>Zombie ID: {{ zombie_attack.2 }}</p>
+            </li>
+        {% empty %}
+            <li>No zombie attacks found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
